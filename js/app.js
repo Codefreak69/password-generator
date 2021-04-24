@@ -15,6 +15,23 @@ const randomFunc = {
   symbol: getSymbol,
 };
 
+
+//Copying to clipboard ........('https://www.30secondsofcode.org/blog/s/copy-text-to-clipboard-with-javascript')=>source {:)}
+copyEl.addEventListener("click", () => {
+  const textArea = document.createElement("textarea");
+  const password = resultEl.innerText;
+
+  if (!password) {
+    return;
+  }
+  textArea.value = password;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  textArea.remove();
+  alert("Password Copied!!!!!!!!!!");
+});
+
 generate.addEventListener("click", () => {
   const length = +lengthEl.value;
   const isUpper = uppercaseEl.checked;
@@ -41,18 +58,18 @@ function generatePassword(lower, upper, number, symbol, length) {
   );
 
   if (typesCount === 0) {
-    return '';
+    return "";
   }
 
   for (let i = 0; i < length; i += typesCount) {
     typeArr.forEach((type) => {
       const funcName = Object.keys(type)[0];
-      
 
       generatedPassword += randomFunc[funcName]();
     });
   }
-  console.log(generatedPassword)
+  const finalPass = generatedPassword.slice(0, length);
+  return finalPass;
 }
 
 //Generate FUnctions....
