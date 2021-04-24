@@ -3,7 +3,7 @@
 
 *{
     margin: 0;
-    padding: 0;
+    
     box-sizing: border-box;
 
 }
@@ -115,9 +115,10 @@ input[type='checkbok']{
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 5px 50px 5px;
-    font-family: 'Bangers', cursive;;
+    float:right;
+    font-family: 'Bangers', cursive;
+    background: rgb(97, 24, 97);
+    border-radius: 10px;
 }
 
 .fa {
@@ -136,7 +137,19 @@ input[type='checkbok']{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 30px; 
+    padding: 5px 2px 5px;
+
     
+  }
+
+  .label{
+    
+    padding: 5px 20px 5px;
+  }
+
+  .social{
+      float: left;
+      
   }
 
   #insta {
@@ -145,8 +158,10 @@ input[type='checkbok']{
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 30px; 
+    padding: 5px 20px 5px;
     
   }
+
 
 @media screen and (max-width: 400px){
     .result-box{
