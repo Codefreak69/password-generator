@@ -18,3 +18,5 @@ You can choose Length of password according to your convinence.
 
 HTML, CSS , JS
 
+### Use the site directly from here
+ https://codefreak69.github.io/password-generator/
